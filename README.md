@@ -1,6 +1,6 @@
 # BillNotify
 
-Mobile-first invoice SMS dashboard for Baba Farid Electrical Store, Bajakhana, Punjab. It syncs posted customer invoices from Odoo and can notify customers through httpSMS.
+Mobile-first invoice SMS dashboard for Baba Farid Electrical Store. It syncs posted customer invoices from Odoo and can notify customers through httpSMS.
 
 ## Local setup
 

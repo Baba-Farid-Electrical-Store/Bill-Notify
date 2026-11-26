@@ -4,3 +4,4 @@
 .dark body{background:#111827;color:#ecf0f7}.dark .sidebar,.dark .mobile-nav,.dark .card,.dark .field,.dark .data-table{background:#1b2433;color:#ecf0f7;border-color:#344054}.dark .navlink{color:#bdc6d4}.dark .navlink.active{background:#482326;color:#ff777a}.dark .data-table td,.dark .data-table th,.dark .row{border-color:#344054}.dark .muted{color:#aab4c4}.dark .button.secondary{background:#263244;color:#ecf0f7;border-color:#48566b}
 .table-wrap{display:none}.mobile-card{display:block}
 @media(min-width:768px){.table-wrap{display:block}.mobile-card{display:none}}
+.brand-lockup{display:flex;align-items:center;gap:8px}.brand-lockup img{border-radius:50%;background:#fff}

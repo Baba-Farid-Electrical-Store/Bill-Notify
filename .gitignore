@@ -7,4 +7,5 @@ dist/
 !.env.example
 _OLD_invoice-sms/node_modules/
 _OLD_invoice-sms/
+BUILD_SPEC.md
 *.tsbuildinfo
