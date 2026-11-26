@@ -1,0 +1,1 @@
+import {SignIn} from '@clerk/nextjs';export default function Page(){return <div style={{minHeight:'100vh',display:'grid',placeItems:'center'}}><div><h1 style={{textAlign:'center'}}>BillNotify</h1><SignIn/></div></div>}

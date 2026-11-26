@@ -1,0 +1,1 @@
+export default function Offline(){return <main style={{maxWidth:420,margin:'18vh auto',padding:24,textAlign:'center'}}><h1>BillNotify</h1><p>You’re offline right now. Reconnect to view the latest invoices and messages.</p><a href="/">Try again</a></main>}

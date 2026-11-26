@@ -1,0 +1,1 @@
+import {TemplateEditor} from '@/components/template-editor';export default function TemplatesPage(){return <><h1>Templates</h1><p className="muted">Edit the SMS customers receive when invoices are ready.</p><div className="section"><TemplateEditor/></div></>}

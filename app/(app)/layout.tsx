@@ -1,0 +1,2 @@
+import {Nav} from '@/components/nav';import {SyncButton} from '@/components/sync-button';import {requireUser} from '@/lib/auth';import {redirect} from 'next/navigation';
+export default async function AppLayout({children}:{children:React.ReactNode}){try{await requireUser()}catch{redirect('/sign-in')}return <div className="shell"><Nav/><main className="main"><header className="topbar"><div className="brand" style={{display:'block',margin:0}}><b>Bill</b>Notify</div><SyncButton/></header>{children}</main></div>}

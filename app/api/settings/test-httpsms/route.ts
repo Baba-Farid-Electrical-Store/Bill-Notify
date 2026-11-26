@@ -1,0 +1,2 @@
+import { requireUser } from '@/lib/auth';import { required } from '@/lib/env';
+export async function POST(){try{await requireUser();const r=await fetch('https://api.httpsms.com/v1/messages',{headers:{'x-api-key':required('HTTPSMS_API_KEY')},signal:AbortSignal.timeout(10000)});return Response.json({ok:r.ok,message:r.ok?'httpSMS connection successful':`httpSMS returned ${r.status}`});}catch(e){return Response.json({ok:false,message:e instanceof Error?e.message:'Connection failed'},{status:400});}}

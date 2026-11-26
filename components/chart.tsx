@@ -1,0 +1,2 @@
+'use client';import {BarChart,Bar,XAxis,YAxis,Tooltip,ResponsiveContainer,Legend} from 'recharts';
+export function ActivityChart({data}:{data:Array<{day:string;sent:number;failed:number}>}){return <div className="chart"><ResponsiveContainer width="100%" height="100%"><BarChart data={data}><XAxis dataKey="day" tick={{fontSize:11}}/><YAxis allowDecimals={false} tick={{fontSize:11}}/><Tooltip/><Legend/><Bar dataKey="sent" fill="#18a05e" radius={[4,4,0,0]}/><Bar dataKey="failed" fill="#e31e24" radius={[4,4,0,0]}/></BarChart></ResponsiveContainer></div>}

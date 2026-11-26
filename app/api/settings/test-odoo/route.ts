@@ -1,0 +1,2 @@
+import { requireUser } from '@/lib/auth';import { required } from '@/lib/env';import { authenticate } from '@/lib/odoo';
+export async function POST(){try{await requireUser();const uid=await authenticate({url:required('ODOO_URL').replace(/\/+$/,''),db:required('ODOO_DB'),username:required('ODOO_USERNAME'),apiKey:required('ODOO_API_KEY')});return Response.json({ok:!!uid,message:uid?'Odoo connection successful':'Odoo authentication failed'});}catch(e){return Response.json({ok:false,message:String(e)},{status:400});}}
