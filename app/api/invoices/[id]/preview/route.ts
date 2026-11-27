@@ -4,10 +4,11 @@ import { requireUser } from '@/lib/auth';
 import { db } from '@/lib/db';
 import { invoices, settings, templates } from '@/lib/db/schema';
 import { DEFAULT_BODY, render } from '@/lib/templates';
+import { safeApiErrorMessage, safeApiErrorStatus } from '@/lib/api-errors';
 
 export const dynamic = 'force-dynamic';
 
-export async function GET(_request: Request, { params }: { params: { id: string } }) {
+export async function GET(_request: Request, { params }: { params: { id: string; }; }) {
   try {
     await requireUser();
     const id = z.coerce.number().int().positive().parse(params.id);
@@ -26,6 +27,9 @@ export async function GET(_request: Request, { params }: { params: { id: string 
     });
     return Response.json({ content });
   } catch (error) {
-    return Response.json({ error: error instanceof Error ? error.message : 'Preview failed' }, { status: 400 });
+    return Response.json(
+      { error: safeApiErrorMessage(error, 'Could not prepare the invoice preview.') },
+      { status: safeApiErrorStatus(error, 500) },
+    );
   }
 }

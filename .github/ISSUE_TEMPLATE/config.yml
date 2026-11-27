@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security concern privately
+    url: https://github.com/Baba-Farid-Electrical-Store/Bill-Notify/security/advisories/new
+    about: Do not post credentials or exploitable security details in a public issue.

@@ -7,11 +7,12 @@ import { db } from '@/lib/db';
 import { invoices, messages, settings, templates } from '@/lib/db/schema';
 import { toE164 } from '@/lib/phone';
 import { DEFAULT_BODY, render } from '@/lib/templates';
+import { safeApiErrorMessage, safeApiErrorStatus } from '@/lib/api-errors';
 
 const bodySchema = z.object({ phone: z.string().optional(), resend: z.boolean().default(false), confirm: z.literal(true) });
 export const dynamic = 'force-dynamic';
 
-export async function POST(request: Request, { params }: { params: { id: string } }) {
+export async function POST(request: Request, { params }: { params: { id: string; }; }) {
   try {
     await requireUser();
     const input = bodySchema.parse(await request.json());
@@ -54,6 +55,9 @@ export async function POST(request: Request, { params }: { params: { id: string 
       throw error;
     }
   } catch (error) {
-    return Response.json({ error: error instanceof Error ? error.message : 'Send failed' }, { status: 400 });
+    return Response.json(
+      { error: safeApiErrorMessage(error, 'Could not send the invoice message.') },
+      { status: safeApiErrorStatus(error, 500) },
+    );
   }
 }

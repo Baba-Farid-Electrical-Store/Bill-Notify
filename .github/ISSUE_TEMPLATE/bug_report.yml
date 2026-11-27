@@ -1,0 +1,35 @@
+name: Bug report
+description: Report a problem with BillNotify.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include customer information, phone numbers, invoice links, credentials, or screenshots containing private data.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Use placeholder values. Never include real customer or invoice data.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version or commit
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant error message
+      description: Remove credentials, personal information, phone numbers, and invoice links before sharing.
+    validations:
+      required: false
