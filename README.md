@@ -7,6 +7,7 @@
     <a href="https://github.com/Baba-Farid-Electrical-Store/Bill-Notify/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Baba-Farid-Electrical-Store/Bill-Notify/actions/workflows/ci.yml/badge.svg"></a>
     <img alt="Next.js 14" src="https://img.shields.io/badge/Next.js-14-black?logo=next.js">
     <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-blue?logo=typescript">
+    <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-green.svg"></a>
   </p>
 </div>
 
@@ -117,4 +118,4 @@ Please do not report security issues in public. See [SECURITY.md](SECURITY.md) f
 
 ## License
 
-No license has been specified yet. Ask the repository owner before reusing or redistributing this code.
+This project is licensed under the [MIT License](LICENSE).
