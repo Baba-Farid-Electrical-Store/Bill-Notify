@@ -32,8 +32,8 @@ export default async function InvoicesPage({ searchParams }: { searchParams: Par
   const nextHref = `/invoices?${nextParams.toString()}`;
 
   return <>
-    <h1>Invoices</h1><p className="muted">Posted customer invoices synced from Odoo</p>
-    <form className="card" style={{ display: 'flex', gap: 8, flexWrap: 'wrap', margin: '16px 0' }}>
+    <div className="page-heading"><h1>Invoices</h1><p>Posted customer invoices synced from Odoo</p></div>
+    <form className="card invoice-filters" style={{ display: 'flex', gap: 8, flexWrap: 'wrap', margin: '16px 0' }}>
       <input className="field" style={{ flex: '1 1 220px', margin: 0 }} name="q" defaultValue={query} placeholder="Search invoice, customer, phone" aria-label="Search invoices" />
       <select className="field" style={{ width: 160, margin: 0 }} name="status" defaultValue={searchParams.status || ''} aria-label="Filter by SMS status">
         <option value="">All statuses</option>{['sent', 'failed', 'skipped', 'not_sent'].map((status) => <option key={status} value={status}>{status.replace('_', ' ')}</option>)}

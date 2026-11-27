@@ -1,7 +1,6 @@
 import { and, desc, eq, gte, or } from 'drizzle-orm';
 import { ActivityChart } from '@/components/chart';
 import { InvoiceActions } from '@/components/invoice-actions';
-import { SyncButton } from '@/components/sync-button';
 import { db } from '@/lib/db';
 import { invoices, messages, syncRuns } from '@/lib/db/schema';
 
@@ -39,7 +38,7 @@ export default async function Dashboard() {
   });
 
   return <>
-    <div className="topbar"><div><h1>Dashboard</h1><p className="muted">Invoice updates at a glance</p></div><SyncButton /></div>
+    <div className="topbar"><div><h1>Dashboard</h1><p className="muted">Invoice updates at a glance</p></div></div>
     <div className="grid">
       <Metric label="SMS sent today" value={sentToday} />
       <Metric label="SMS sent · 7 days" value={sentWeek} />
