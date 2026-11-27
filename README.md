@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/icons/icon-192.png" alt="BillNotify app icon" width="96" height="96" />
+  <img src="public/favicon.png" alt="BillNotify app icon" width="96" height="96" />
   <h1>BillNotify</h1>
   <p><strong>Invoice reminders for Baba Farid Electrical Store</strong></p>
   <p>Sync posted invoices from Odoo and send customer updates by SMS.</p>
